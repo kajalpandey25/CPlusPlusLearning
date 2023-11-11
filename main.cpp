@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 // f(x) = x^2 + 2
@@ -8,6 +9,39 @@ int add(int a, int b)
     c = a + b;
     return c;
 }
+
+class Employee
+{
+public:
+    string name;
+    int salary;
+
+    Employee(string n, int s, int sp)
+    {
+        this->name = n;
+        this->salary = s;
+        this->secretPassword = sp;
+    }
+
+    void printDetails()
+    {
+        cout << "The name of our first employee is " << this->name << " And his salary is " << this->salary << " Dollars " << endl;
+    }
+
+    void getsecretPassword()
+    {
+        cout << "The secret password of employee is " << this->secretPassword;
+    }
+
+private:
+    int secretPassword;
+};
+
+class Programmer : public Employee
+{
+public:
+    int errors;
+};
 
 int main()
 {
@@ -135,5 +169,52 @@ int main()
     //     cout << "Marks of " << i << "th student is " << marks[i] << endl;
     // }
 
-    
+    // 2-D Array
+
+    // int arr2d[2][3] = {
+    //     {1, 2, 3},
+    //     {4, 5, 6}};
+    // for (int i = 0; i < 2; i++)
+    // {
+    //     for (int j = 0; j < 3; j++)
+    //     {
+    //         cout << "The value at " << i << " ," << j << " is " << arr2d[i][j]<<endl;
+    //     }
+    // }
+
+    // Typecasting
+    // int a = 343;
+    // float b = 87.34;
+    // cout << (float)a / 34<<endl;
+
+    // cout << (int)b;
+
+    // Strings
+
+    // string name = "Kajal";
+    // cout << "The name is " << name << endl;
+    // cout << "The length of name is " << name.length() << endl;
+    // cout << "The name is " << name.substr(0, 1) << endl;
+    // cout << "The name is " << name.substr(2, 3) << endl;
+
+    // Pointers
+    // Pointers are a special data type that store the address of a variable.
+
+    // int a = 34;
+    // int *ptra; // ptr can point to an address which holds int data
+    // ptra = &a;
+    // cout << "The value of a is " << a << endl;
+    // cout << "The value of a is " << *ptra << endl;
+    // cout << "The address of a is " << &ptra << endl;
+    // cout << "The value of a is " << ptra << endl;
+
+    // Classes
+
+    Employee har("kajal constructor", 344, 1000);
+    // har.name = "kajal";
+    // har.salary = 100;
+    har.printDetails();
+    har.getsecretPassword();
+    // cout << har.secretPassword;
+    // cout << "The name of our first employee is " << har.name << " And his salary is " << har.salary << " Dollars " << endl;
 }
